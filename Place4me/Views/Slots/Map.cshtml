@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BusinessEntities.Database.slot>
+@{
+    ViewBag.Title = "Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="container body-content">
+<h2>Map for the Carpark</h2>
+
+    <table class="table" id="tblMap" border="1" align="center">
+        <tr style="width:auto; height:100px; border:thick" >
+            @foreach (var item in Model)
+            {
+                if (item.slot_isFree == 1)
+                {
+                    <td bgcolor="red" style="border-color:black" width="10px" height="20px"></td>
+                }
+                if (item.slot_isFree == 0)
+                {
+                    <td bgcolor="green" style="border-color:black" width="10px" height="20px"></td>
+                }
+            }
+        </tr>
+    </table>
+
+@Html.Partial("_Footer")
+</div>
+
+
+
+

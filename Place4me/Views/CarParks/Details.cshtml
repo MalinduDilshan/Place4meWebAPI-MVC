@@ -1,0 +1,38 @@
+﻿@model BusinessEntities.Database.carpark
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="container body-content">
+    <h2>Details</h2>
+    <div>
+        <h4>carpark</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.carpark_place)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.carpark_place)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.carpark_place_lat)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.carpark_place_lat)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.carpark_place_long)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.carpark_place_long)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    @Html.Partial("_Footer")
+</div>

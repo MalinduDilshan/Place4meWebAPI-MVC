@@ -1,0 +1,99 @@
+﻿@model IEnumerable<BusinessEntities.Database.carpark>
+@{
+    ViewBag.Title = "Carpark List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="container body-content">
+    <h2>Car Parks</h2>
+
+@if (Context.User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create", "CarParks", htmlAttributes: new { @class = "btn btn-success btn-primary btn-sm" })
+    </p>
+}
+  
+    <table class="table" id="carparksTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.carpark_place)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.carpark_place_lat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.carpark_place_long)
+                </th>
+                <th>
+                    @Html.DisplayName("Options")
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.carpark_place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.carpark_place_lat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.carpark_place_long)
+                </td>
+                <td>
+                    @if (Context.User.IsInRole("Admin"))
+                    {
+                        <a href="@Url.Action("Index","Slots", new { id = item.carpark_id})"><img src="~/Images/car.png" /></a>
+                    }   
+                                    
+                    <a href="@Url.Action("Map","CarParks", new { id = item.carpark_id})"><img src="~/Images/map.png" /></a>
+
+                    @if (Context.User.IsInRole("Admin"))
+                    {  
+                        <a href="@Url.Action("Create","Slots", new { id = item.carpark_id})"><img src="~/Images/plus.png" /></a>
+                        <a href="@Url.Action("Edit","CarParks", new { id = item.carpark_id})"><img src="~/Images/edit.png" /></a>
+                        <a onclick="Delete(@item.carpark_id)"><img src="~/Images/rubbish-bin.png" /></a>
+                    }                   
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.Partial("_Footer")
+</div>
+
+    <link class="a" rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.2.1/css/dataTables.responsive.css" />
+
+
+    @section scripts{
+        <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.js"></script>
+
+        <script>
+            $('#carparksTable').DataTable({
+                responsive: true
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#carparksTable').DataTable();
+            });
+        </script>
+        <script>
+            $(function () {
+                var SuccessMessage = '@TempData["SuccessMessage"]'
+                if (SuccessMessage != '')
+                    alertify.success(SuccessMessage);
+            })
+        </script>
+        <script>
+            function Delete(id) {
+                alertify.confirm('Place4me', 'Are You Sure to Delete this Record?', function () {
+                    window.location.href = '@Url.Action("Delete","CarParks")/' + id;
+                }, null);
+            }
+        </script>
+    }

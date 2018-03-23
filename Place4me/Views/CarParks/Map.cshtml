@@ -1,0 +1,14 @@
+﻿@model BusinessEntities.Database.carpark
+@{
+    ViewBag.Title = "Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="container body-content">
+    <h2>Car Park Map</h2>
+
+    @if (Model.carpark_id == 1)
+    {
+        <img src="@Url.Content("~/Images/carparkmap.jpg")" style="height:600px; width:800px" />
+    }
+</div>

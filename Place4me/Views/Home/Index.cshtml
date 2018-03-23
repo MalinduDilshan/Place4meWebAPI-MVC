@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*Slides*@
+<aside id="fh5co-hero" class="js-fullheight">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_1.jpg);">
+                <div class="overlay-gradient"></div>
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                        <div class="slider-text-inner">
+                            <h2>We Make Life Less Difficult For You</h2>
+                            <p class="fh5co-lead">Designed by the Team Liquid <i class="icon-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_2.jpg);">
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                        <div class="slider-text-inner">
+                            <h2>We Think Different That Others Can't</h2>
+                            <p class="fh5co-lead">Designed by the Team Liquid <i class="icon-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_3.jpg);">
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                        <div class="slider-text-inner">
+                            <h2>Find Select & Park</h2>
+                            <p class="fh5co-lead">Designed by the Team Liquid <i class="icon-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+@*Details section*@
+<div id="fh5co-services-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+                <h2>Our Awesome Features</h2>
+                <p>We can do lot of things for you. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-laptop"></i>
+                    <div class="desc">
+                        <h3>Web App</h3>
+                        <p>Asp.Net Web Site for Administration Tool and view more in detail.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-tablet"></i>
+                    <div class="desc">
+                        <h3>Mobile App</h3>
+                        <p>Android App developed for achived access from everyone in anywhere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-money"></i>
+                    <div class="desc">
+                        <h3>Save Time</h3>
+                        <p>We give quick access to any carpak within a second for your convinience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-server"></i>
+                    <div class="desc">
+                        <h3>Realtime Monitoring</h3>
+                        <p>We will give real time status updates about every car park near you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-line-chart"></i>
+                    <div class="desc">
+                        <h3>IoT App</h3>
+                        <p>IoT based Image Processing System to identify the free slots of a car park.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="services">
+                    <i class="icon-pie-chart"></i>
+                    <div class="desc">
+                        <h3>Data Analytics</h3>
+                        <p>We will give functionality to data mining for particular car park.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Tiles*@
+<div id="fh5co-work-section" class="fh5co-light-grey-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+                <h2>Place4me</h2>
+                <p>The Modern Parking Style. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/NIBM.jpg)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">NIBM Car Parks</h3>
+                            <h5 class="category">Web Application</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/airport.jpg)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">Public Car Parks</h3>
+                            <h5 class="category">Mobile Application</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/wheel.jpg)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">Meter Taxi Parks</h3>
+                            <h5 class="category">Pick me</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/web.png)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">Web App</h3>
+                            <h5 class="category">Asp.Net</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/mobile.jpeg)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">Mobile App</h3>
+                            <h5 class="category">Android</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 animate-box">
+                <a href="#" class="item-grid text-center">
+                    <div class="image" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/iot.jpeg)"></div>
+                    <div class="v-align">
+                        <div class="v-align-middle">
+                            <h3 class="title">IoT App</h3>
+                            <h5 class="category">OpenCV</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-12 text-center animate-box">
+                <p><a href="http://fedolab.co.nf/" class="btn btn-primary with-arrow">View More Projects <i class="icon-arrow-right"></i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Footer Image*@
+<div class="fh5co-cta" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_1.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="col-md-12 text-center animate-box">
+            <h3>We Try To Update The Site Everyday</h3>
+            <p><a href="http://fedolab.co.nf/" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<footer id="fh5co-footer" role="contentinfo">
+
+    <div class="container">
+        <div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>About Us</h3>
+            <p>We are Team Liquid who are undergraduates of Coventry University that is affiliated with National Institute of Business Management (NIBM). Furthermore our effective team can help users to achieve incredible results.</p>
+            <p><a href="http://fedolab.co.nf/" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>Our Services</h3>
+            <p>We strive to become a global app and passionate in helping packing vehicles through innovative technologies to reach and maximize their comfort.</p>
+        </div>
+        <div class="col-md-4 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>Follow Us</h3>
+            <ul class="fh5co-social">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/fedolab"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li><a href="#"><i class="icon-instagram"></i></a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-12 fh5co-copyright text-center">
+            <p>&copy; @DateTime.Now.Year Place4me. All Rights Reserved. <span>Designed with <a href="https://www.asp.net/mvc" target="_blank">Asp.Net MVC</a> </span></p>
+        </div>
+
+    </div>
+</footer>

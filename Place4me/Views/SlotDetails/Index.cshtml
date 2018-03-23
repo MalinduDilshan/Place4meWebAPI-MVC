@@ -1,0 +1,92 @@
+﻿@model IEnumerable<BusinessEntities.Database.slot_details>
+
+@{
+    ViewBag.Title = "Slots Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<div class="container body-content">
+    <h2>Slots Details</h2>
+
+    <table class="table" id="SlotDetailsTable">
+        <thead>
+            <tr>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.slot_details_parked_vehicle_no)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.slot_details_parked_date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.slot_details_parked_time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.slot_details_parked_end_time)
+                </th>
+                <th>
+                    @Html.DisplayName("Options")
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.slot_details_parked_vehicle_no)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.slot_details_parked_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.slot_details_parked_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.slot_details_parked_end_time)
+                </td>
+                <td>
+                    @if (Context.User.IsInRole("Admin"))
+                    {
+                        @*<a href="@Url.Action("Edit","Slots", new { id = item.slot_details_id})" ><img src="~/Images/edit.png" /></a>*@
+                        <a onclick="Delete(@item.slot_details_id)"><img src="~/Images/rubbish-bin.png" /></a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.Partial("_Footer")
+</div>
+
+    <link class="a" rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.2.1/css/dataTables.responsive.css" />
+
+    @section scripts{
+        <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.js"></script>
+
+        <script>
+            $('#SlotDetailsTable').DataTable({
+                responsive: true
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#SlotDetailsTable').DataTable();
+            });
+        </script>
+        @*<script>
+            $(function () {
+                var SuccessMessage = '@TempData["SuccessMessage"]'
+                if (SuccessMessage != '')
+                    alertify.success(SuccessMessage);
+            })
+        </script>*@
+        <script>
+            function Delete(id) {
+                alertify.confirm('Place4me', 'Are You Sure to Delete this Record?', function () {
+                    window.location.href = '@Url.Action("Delete","SlotDetails")/' + id;
+                }, null);
+            }
+        </script>
+    }

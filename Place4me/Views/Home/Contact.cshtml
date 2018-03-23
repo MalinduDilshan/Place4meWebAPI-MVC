@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+@*Slides*@
+<aside id="fh5co-hero" class="js-fullheight">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_2.jpg);">
+                <div class="overlay-gradient"></div>
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                        <div class="slider-text-inner">
+                            <h2>Get in touch. Don't be shy.</h2>
+                            <p class="fh5co-lead">Designed by the Team Liquid <i class="icon-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+@*Contact Deatails*@
+<div class="fh5co-contact animate-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 animate-box">
+                <h2>Place4me from us</h2>
+                <p>First and foremost we have used Android Operating System and developed using the Google Map which is a third party API, For users to know their correct location and free slots. In addition to that, we have used Raspberry PI and open CV(open source computer vision) which is a library of programming functions mainly aimed at real-time computer vision to develop this app. As a team we have achieved a great success with our clients.
+.</p><br><br>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Info.</h3>
+                <ul class="contact-info">
+                    <li><i class="icon-map"></i>35/1/1/A Moragasmulla, Rajagiriya</li>
+                    <li><i class="icon-phone"></i>+ 94 715 172 574</li>
+                    <li><i class="icon-envelope"></i><a href="mailto:fedolabsoft@gmail.com">fedolabsoft@gmail.com</a></li>
+                    <li><i class="icon-globe"></i><a href="http://fedolab.co.nf/">www.fedolab.co.nf</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7498848195687!2d79.89272161477284!3d6.920475394999774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259bfda72769f%3A0x51043bc77c1f03b4!2sMoragasmulla+Rd!5e0!3m2!1sen!2slk!4v1521649286006" width="325" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Footer Image*@
+<div class="fh5co-cta" style="background-image: url(@Url.Content("~/Content/place4meStyle/")images/slide_1.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="col-md-12 text-center animate-box">
+            <h3>We Try To Update The Site Everyday</h3>
+            <p><a href="http://fedolab.co.nf/" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<footer id="fh5co-footer" role="contentinfo">
+
+    <div class="container">
+        <div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>About Us</h3>
+            <p>We are Team Liquid who are undergraduates of Coventry University that is affiliated with National Institute of Business Management (NIBM). Furthermore our effective team can help users to achieve incredible results.</p>
+            <p><a href="http://fedolab.co.nf/" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>Our Services</h3>
+            <p>We strive to become a global app and passionate in helping packing vehicles through innovative technologies to reach and maximize their comfort.</p>
+        </div>
+        <div class="col-md-4 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+            <h3>Follow Us</h3>
+            <ul class="fh5co-social">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/fedolab"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li><a href="#"><i class="icon-instagram"></i></a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-12 fh5co-copyright text-center">
+            <p>&copy; @DateTime.Now.Year Place4me. All Rights Reserved. <span>Designed with <a href="https://www.asp.net/mvc" target="_blank">Asp.Net MVC</a> </span></p>
+        </div>
+
+    </div>
+</footer>

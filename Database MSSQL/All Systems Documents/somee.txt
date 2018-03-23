@@ -1,0 +1,27 @@
+<DRS Connections>
+<add name="DefaultConnection" connectionString="workstation id=DRSFisheries.mssql.somee.com;packet size=4096;user id=dilshan;pwd=Manhatan394;data source=DRSFisheries.mssql.somee.com;persist security info=False;initial catalog=DRSFisheries" providerName="System.Data.SqlClient" />
+<add name="DRSEntities" connectionString="metadata=res://*/DataBase.DRS.csdl|res://*/DataBase.DRS.ssdl|res://*/DataBase.DRS.msl; provider=System.Data.SqlClient;provider connection string=&quot;data Source=DRSFisheries.mssql.somee.com; Initial Catalog=DRSFisheries; User ID=dilshan; Password=Manhatan394;MultipleActiveResultSets=True&quot;" providerName="System.Data.EntityClient" />
+
+
+
+
+
+<Place4me Connections>
+<add name="IdentityConnection" connectionString="workstation id=Place4me.mssql.somee.com;packet size=4096;user id=malindudilshan;pwd=Manhatan394;data source=Place4me.mssql.somee.com;persist security info=False;initial catalog=Place4me" providerName="System.Data.SqlClient" />
+<add name="Place4meEntities" connectionString="metadata=res://*/Database.Place4meModel.csdl|res://*/Database.Place4meModel.ssdl|res://*/Database.Place4meModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;workstation id=Place4me.mssql.somee.com;packet size=4096;user id=malindudilshan;pwd=Manhatan394;data source=Place4me.mssql.somee.com;persist security info=False;initial catalog=Place4me&quot;" providerName="System.Data.EntityClient" />
+
+
+
+<add name="Place4meEntities" connectionString="metadata=res://*/Database.Place4meModel.csdl|res://*/Database.Place4meModel.ssdl|res://*/Database.Place4meModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data Source=Place4me.mssql.somee.com; Initial Catalog=Place4me; User ID=malindudilshan; Password=Manhatan394;MultipleActiveResultSets=True&quot;" providerName="System.Data.EntityClient" />
+
+
+CREATE TRIGGER mytrigger ON AspNetUsers
+FOR INSERT
+AS
+
+INSERT INTO AspNetUserRoles
+        (UserId, RoleId)
+    SELECT
+        Id, 2
+        FROM inserted
+go
