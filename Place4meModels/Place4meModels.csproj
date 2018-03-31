@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Carpark.cs" />
     <Compile Include="CarparkForMobile.cs" />
+    <Compile Include="CarParkFreeSlotNo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Slot.cs" />
     <Compile Include="SlotDetails.cs" />

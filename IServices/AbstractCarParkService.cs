@@ -124,5 +124,7 @@ namespace IServices
         public abstract IEnumerable<carpark> GetFreeCarParks(); //abstract GetFreeCarParks() in this class
 
         public abstract IEnumerable<CarparkForMobile> GetCarParksForMobile();   //abstract GetCarParksForMobile() in this class
+
+        public abstract CarParkFreeSlotNo GetCarParksFreeSlotNo(int carparkid);   //abstract GetCarParksFreeSlotNo() in this class
     }
 }

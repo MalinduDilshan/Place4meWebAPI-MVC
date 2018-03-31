@@ -26,5 +26,7 @@ namespace IControllerManagers
         IEnumerable<carpark> GetFreeCarParks();
 
         IEnumerable<CarparkForMobile> GetCarParksForMobile();
+
+        CarParkFreeSlotNo GetCarParksFreeSlotNo(int carparkid);
     }
 }

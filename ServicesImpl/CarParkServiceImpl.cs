@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace ServicesImpl
     {
         private Place4meEntities db;
         private CarParkMapper carParkMapper;
+        private FreeSlotNoMapper freeSlotNoMapper;
 
         public CarParkServiceImpl()
         {
@@ -38,6 +39,27 @@ namespace ServicesImpl
             return carparkMobileList;   //this will return new carpark list for Mobile version
         }
 
+        public override CarParkFreeSlotNo GetCarParksFreeSlotNo(int carparkid)
+        {
+            List<slot> entities = new List<slot>();
+            carpark carParkEntity = new carpark();
+            CarParkFreeSlotNo freeSlotNo = null;
+            freeSlotNoMapper = new FreeSlotNoMapper();
+
+            entities = db.slots.Where(s => s.carpark.carpark_id == carparkid && s.slot_status == 1 && s.slot_isFree == 0).ToList();
+            carParkEntity = db.carparks.Where(c => c.carpark_id == carparkid && c.carpark_status == 1).FirstOrDefault();
+
+            int[] slotNo = new int[entities.Count];
+            int i = 0;
+
+            foreach (slot entity in entities)
+            {
+                slotNo[i] = entity.slot_id;
+                i++;
+            }
+            freeSlotNo = freeSlotNoMapper.mapToMobile(carParkEntity, slotNo);
+            return freeSlotNo;
+        }
         public override IEnumerable<carpark> GetFreeCarParks()
         {
             throw new NotImplementedException();

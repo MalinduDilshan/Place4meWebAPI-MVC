@@ -31,7 +31,7 @@ namespace Place4meWebAPI.Controllers
         [ResponseType(typeof(carpark))]
         public IHttpActionResult Getcarpark(int id)
         {
-            carpark  carpark = _carParkControllerManager.GetCarPark(id);
+            carpark carpark = _carParkControllerManager.GetCarPark(id);
             if (carpark == null)
             {
                 return NotFound();
@@ -39,5 +39,19 @@ namespace Place4meWebAPI.Controllers
 
             return Ok(carpark);
         }
+
+
+        // GET: api/MobileCarParks/5
+        //[ResponseType(typeof(CarParkFreeSlotNo))]
+        //public IHttpActionResult Getcarpark(string place)
+        //{
+        //    CarParkFreeSlotNo carParkFreeSlotNo = _carParkControllerManager.GetCarParksFreeSlotNo(place);
+        //    if (carParkFreeSlotNo == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(carParkFreeSlotNo);
+        //}
     }
 }

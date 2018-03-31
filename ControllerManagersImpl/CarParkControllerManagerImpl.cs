@@ -116,5 +116,17 @@ namespace ControllerManagersImpl
                 throw;
             }
         }
+
+        public CarParkFreeSlotNo GetCarParksFreeSlotNo(int carparkid)
+        {
+            try
+            {
+                return _carParkService.GetCarParksFreeSlotNo(carparkid);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
